@@ -1,13 +1,13 @@
 import './App.css';
 import React from 'react';
-import Navbar from './fragment/NavBar'
-import CartWidget from './fragment/CartWidget';
+import Navbar from './NavBar/NavBar.jsx'
+import ItemListContainer from './ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      <CartWidget/>
+      <ItemListContainer  saludo="hola"/>
     </div>
   );
 }

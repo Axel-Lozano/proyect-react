@@ -1,11 +1,12 @@
 import React from 'react';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Logo</a>
+                    <a className="navbar-brand" href="#"><CartWidget/></a>
                     <div className="collapse navbar-collapse" id="navbarColor01">
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
