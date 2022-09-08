@@ -12,7 +12,7 @@ export const products =[
         id: 2,
         description: "fernet branca",
         stock: 15,
-        img: "https://beermarket.com.ar/wp-content/uploads/2020/11/Branca-1L.png"
+        img: "https://beermarket.com.ar/wp-content/uploads/2020/11/Branca-1L.jpg"
     },{
         title: "vodka",
         price: 1000,

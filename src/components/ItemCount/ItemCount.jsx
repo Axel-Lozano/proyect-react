@@ -22,8 +22,7 @@ const ItemCount = ({stock, onAdd}) => {
 
     return (
         <>
-            <div className="card bg-light mb-3" style={{ maxWidth: '20rem' }}>
-                <div className="card-header">Counter</div>
+            <div className="card bg-light mb-3" style={{maxWidth: '15rem', maxHeight:"16rem" }}>
                 <div className="card-body">
                     <div>
                         <p>Stock: {stock}</p>
