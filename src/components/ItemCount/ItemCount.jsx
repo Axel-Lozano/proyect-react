@@ -16,21 +16,16 @@ const ItemCount = ({stock, onAdd}) => {
         }
     }
 
-    function reset() {
-        setCount(1)
-    }
 
     return (
         <>
             <div className="card bg-light mb-3" style={{maxWidth: '15rem', maxHeight:"16rem" }}>
                 <div className="card-body">
                     <div>
-                        <p>Stock: {stock}</p>
-                        <p>Cantidad: {count}</p>
-
                         <div>
-                            <button className='btn btn-danger' onClick={subStract}>-</button>
-                            <button className='btn btn-light' onClick={reset}>Reset</button>
+                            <p>Cantidad: {count} <br />
+                            (Cantidad disponible: {stock})</p>
+                            <button className='btn btn-danger' onClick={subStract}>-</button> 
                             <button className='btn btn-success' onClick={add}>+</button>
                         </div>
                         <div>
