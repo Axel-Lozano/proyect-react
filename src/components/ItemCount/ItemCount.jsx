@@ -1,5 +1,6 @@
 import "./ItemCount.css";
 import {useState} from 'react';
+import {Link} from 'react-router-dom';
 
 const ItemCount = ({stock, onAdd}) => {
     const [count, setCount] = useState(1); 
@@ -19,18 +20,16 @@ const ItemCount = ({stock, onAdd}) => {
 
     return (
         <>
-            <div className="card bg-light mb-3" style={{maxWidth: '15rem', maxHeight:"16rem" }}>
-                <div className="card-body">
+            <div className="">
+                <div>
                     <div>
-                        <div>
-                            <p>Cantidad: {count} <br />
-                            (Cantidad disponible: {stock})</p>
-                            <button className='btn btn-danger' onClick={subStract}>-</button> 
-                            <button className='btn btn-success' onClick={add}>+</button>
-                        </div>
-                        <div>
-                            <button className='btn btn-success' onClick={() => onAdd(count) }>Confirmar</button>
-                        </div>
+                        <p>Cantidad: {count} <br />
+                        (Cantidad disponible: {stock})</p>
+                        <button className='btn btn-danger' onClick={subStract}>-</button> 
+                        <button className='btn btn-success' onClick={add}>+</button>
+                    </div>
+                    <div>
+                        <button className='btn btn-success' onClick={() => onAdd(count) }><Link to={"/cart"} className='nav-link'>Confirmar</Link></button>
                     </div>
                 </div>
             </div>

@@ -9,8 +9,7 @@ const ItemDetail = ({item}) => {
     }
 
     return (
-        <>
-
+        <div className='detalle'>
             <div className="card mb-3" style={{ maxWidth: '1000px' }}>
                 <div className="row g-0">
                     <div className="col-md-4">
@@ -23,11 +22,13 @@ const ItemDetail = ({item}) => {
                             <p className="card-text">Precio: ${item.price}</p>
                             <p className="card-text">Stock: {item.stock}</p>
                         </div>
-                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+                        <div>
+                            <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+                        </div>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
