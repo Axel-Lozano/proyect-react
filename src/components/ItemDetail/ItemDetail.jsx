@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {useState, useContext} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
+import {contexto} from '../../context/CartContext';
 
-const ItemDetail = ({item}) => {
-    
+
+const ItemDetail = ({ item }) => {
+
+    const [cantCart, setCantCart] = useState(0)
+    const { addItem } = useContext(contexto)
+
     const onAdd = (quantity) => {
-        console.log(quantity)
+        setCantCart(cantCart + quantity)
+        addItem(item, quantity)
+        console.log(item, quantity)
     }
+
+    
 
     return (
         <div className='detalle'>
