@@ -7,14 +7,14 @@ export const products =[
         stock: 10,
         img:"https://www.proveeduriapiaf.com.ar/wp-content/uploads/Apostoles.jpg"
     },{
-        title: "fernet",
+        title: "Fernet",
         price: 1600,
         id: 2,
         description: "fernet branca",
         stock: 15,
         img: "https://beermarket.com.ar/wp-content/uploads/2020/11/Branca-1L.jpg"
     },{
-        title: "vodka",
+        title: "Vodka",
         price: 1000,
         id: 3,
         description: "vodka sernova",

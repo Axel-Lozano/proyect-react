@@ -43,10 +43,12 @@ const CartContext = ({ children }) => {
         setCarrito([])
     }
 
+
     const cartCounter = () => {
         const totalItems = carrito.reduce((acc, item) => acc + item.quantity, 0)
         return totalItems;
     }
+    
 
     const totalPrice = () => {
         let totalCarrito = 0;
