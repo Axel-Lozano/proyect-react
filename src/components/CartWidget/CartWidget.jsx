@@ -10,7 +10,7 @@ const CartWidget = () => {
 
     return carrito.length > 0 ? (
         <Link to={"/cart"}>
-            <button type="button" className="btn btn-secondary"><img className='icon' src="img/iconCart.png"/><span>{cartCounter()}</span></button>
+            <button type="button" className="btn btn-secondary"><img className='icon' src="../img/iconCart.png"/><span>{cartCounter()}</span></button>
         </Link>
         
     )

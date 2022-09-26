@@ -15,7 +15,7 @@ const Cart = () => {
                     carrito.map(item => (
 
                         <div className='item'>
-                            <div className="card mb-3" style={{ maxWidth: '1000px' }}>
+                            <div className="card mb-3" style={{ maxWidth: '700px' }}>
                                 <div className="row g-0">
                                     <div className="col-md-4">
                                         <img src={item.img} alt={item.title} className="img-fluid rounded-start" />

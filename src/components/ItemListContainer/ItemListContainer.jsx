@@ -1,30 +1,33 @@
 import React,{useEffect, useState } from 'react';
-import { products } from '../../mock/products';
 import ItemList from '../ItemList/ItemList';
+import db from '../../services/firebase';
+import { collection, getDocs } from 'firebase/firestore'
 
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
 
     
     const [productList, setProductList] = useState([]);
 
-    const getProducts = () => new Promise((resolve,reject) => {
-        setTimeout(() => resolve(products), 2000)
-    })
+    const getData = async () => {
+        try {
+            const  document = collection(db,"Items")
+            const col = await getDocs(document)
+            console.log("col.docs", col.docs)
+            const result = col.docs.map((doc) => doc = {id: doc.id, ...doc.data()})
+            setProductList(result)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     useEffect(() => {
-        getProducts()
-        .then(products => setProductList(products))
-        .catch(error => console.error(error))
-
+        getData()
     }, []);
-
-    console.log(productList)
 
 
     return (
         <>
-            <h1>{props.saludo}</h1>
             <ItemList productList={productList}/>
         </>
     );
