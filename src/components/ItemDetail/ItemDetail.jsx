@@ -12,7 +12,6 @@ const ItemDetail = ({ item }) => {
     const onAdd = (quantity) => {
         setCantCart(cantCart + quantity)
         addItem(item, quantity)
-        console.log(item, quantity)
     }
 
     

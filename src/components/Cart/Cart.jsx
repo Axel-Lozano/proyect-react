@@ -5,7 +5,7 @@ import './Cart.css'
 
 const Cart = () => {
 
-    const { carrito, removeItem, totalPrice, clear} = useContext(contexto);
+    const { carrito, removeItem, totalPrice} = useContext(contexto);
 
     return carrito.length > 0 ?
         (
@@ -48,7 +48,9 @@ const Cart = () => {
                 }
                 <div>
                     <h4>Precio Total: {totalPrice()}</h4>
-                    <button className='btn btn-secondary'onClick={() => clear()}>Finalizar compra</button>
+                    <Link to='/checkout'>
+                        <button className='btn btn-secondary'>Finalizar compra</button>
+                    </Link>
                 </div>
             </div>
         ) : (
