@@ -7,6 +7,7 @@ import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
 import Cart from './Cart/Cart';
 import CartContext from '../context/CartContext';
 import Checkout from './Checkout/Checkout';
+import Footer from './Footer/Footer';
 
 
 const App = () => {
@@ -23,7 +24,8 @@ const App = () => {
                 <Route path="/cart" element={<Cart/>}></Route>
                 <Route path="/checkout" element={<Checkout/>}></Route>
               </Routes>
-            </CartContext>
+            <Footer/>
+          </CartContext>
         </BrowserRouter>
     </>
   );
